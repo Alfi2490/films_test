@@ -8,7 +8,7 @@ if (filmFavorites === null) {
     filmFavorites = filmFavorites.split('&');
 };
 
-getData()
+getData('Popular')
 .then(res => {
 
     films = res.results;
