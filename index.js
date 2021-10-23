@@ -8,8 +8,7 @@ if (filmFavorites === null) {
     filmFavorites = filmFavorites.split('&');
 };
 
-getData('Popular')
-.then(res => {
+getData('popular').then(res => {
 
     films = res.results;
     let root = document.querySelector("#root");
