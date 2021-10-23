@@ -1,0 +1,42 @@
+.FilmsList {
+    padding: 20px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Film, .FilmFullDescription{
+    flex-basis: 23%;;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin-bottom: 15px;
+    align-items: center;
+    height: 360px;
+}
+
+.Film{
+    overflow: hidden;
+}
+
+.Film:hover {
+    cursor: pointer;
+    background-color: thistle;
+}
+
+.FilmPoster {
+    width: 70%;
+    margin-bottom: 5px;
+}
+
+.FilmFullDescription{
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.FullDescriptionFilmPoster {
+    width: 30%;
+    margin-bottom: 5px;
+}

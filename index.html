@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>        
+        <meta charset="UTF-8">
+        <title>Films APP!</title>
+
+        <script src="index.js" defer ></script>
+        <script src="localStorage.js"></script>
+        <script src="api.js"></script>
+        <script src="showFullDescription.js"></script>
+        <script src="hideFullDescription.js"></script>
+        <script src="addToFavorites.js"></script>
+        <script src="removeFromFavorites.js"></script>
+
+        <link rel="stylesheet" href="./reset.css">
+        <link rel="stylesheet" href="./index.css">
+        <link rel="stylesheet" href="./FilmsList.css">
+        <link rel="stylesheet" href="./Header.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <style>
+
+        </style>
+                
+    </head>
+    <body>
+        <div id="root">
+            <div class="Header" >
+                <button class="SotrByName">Sort by name</button>
+                <button class="SortByDate">Sort by date</button>
+                <button class="Popular">Show popular</button>
+                <button class="NowPlaying">Show now playing</button>
+                <button class="Favorites">Show favorites</button>
+                <input class="Title" type="text" name="Title" id="Title" placeholder="Type film name">
+            </div>
+        </div>
+    </body>
+</html>
