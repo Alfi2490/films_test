@@ -13,6 +13,10 @@
         <script src="removeFromFavorites.js"></script>
         <script src="showFavorites.js"></script>
         <script src="showNowPlaying.js"></script>
+        <script src="showPopular.js"></script>
+        <script src="sortByName.js"></script>
+        <script src="searchingFilms.js"></script>
+        <script src="renderFilmsList.js"></script>
 
         <link rel="stylesheet" href="./reset.css">
         <link rel="stylesheet" href="./index.css">
@@ -30,12 +34,11 @@
     <body>
         <div id="root">
             <div class="Header" >
-                <button class="SotrByName">Sort by name</button>
-                <button class="SortByDate">Sort by date</button>
-                <button class="Popular">Show popular</button>
+                <button class="SotrByName" onclick="sortByName()">Sort by name</button>
+                <button class="Popular" onclick="showPopular()">Show popular</button>
                 <button class="NowPlaying" onclick="showNowPlaying()">Show now playing</button>
                 <button class="Favorites" onclick="showFavorites()">Show favorites</button>
-                <input class="Title" type="text" name="Title" id="Title" placeholder="Type film name">
+                <input class="Title" type="text" name="Title" id="Title" placeholder="Type film name" onchange="searchingFilms(event.target.value)">
             </div>
         </div>
     </body>
