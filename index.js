@@ -24,7 +24,9 @@ getData('popular').then(res => {
 
         let inFavs = '';
 
-        if (filmFavorites.includes(f.id.toString())) {
+        if (filmFavorites === null) {
+            filmFavorites = [];
+        } else if (filmFavorites.includes(f.id.toString())) {
             inFavs = 'InFavs';
         };
 

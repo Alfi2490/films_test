@@ -2,7 +2,7 @@ body {
     background-color: blueviolet;
 }
 
-#root{
+.root{
     background-color: rgb(104, 104, 231);
     min-height: 100vh;
     width: 80%;
@@ -34,3 +34,4 @@ p{
 button:hover{
     cursor: pointer;
 }
+
