@@ -1,4 +1,5 @@
 function renderFilmsList() {    
+
     let filmsList = document.querySelector(".FilmsList");
     filmsList.innerHTML = '';
     listOfFilms = '';
@@ -12,7 +13,7 @@ function renderFilmsList() {
         };
 
         if (f.poster_path === null) {
-            poster = 'https://motivatevalmorgan.com/wp-content/uploads/2016/06/default-movie-768x1129.jpg';
+            poster = ALT_POSTER;
         } else {
             poster = `${IMG_URL}${f.poster_path}`;
         }
@@ -27,5 +28,6 @@ function renderFilmsList() {
              </div>
          `;            
     });
+
     filmsList.innerHTML = listOfFilms;
 };

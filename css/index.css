@@ -1,18 +1,27 @@
 body {
-    background-color: blueviolet;
+    background-image: url(https://wallpapercave.com/wp/wp5978594.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .root{
-    background-color: rgb(104, 104, 231);
+    background-color: rgba(255, 37, 37, 0.4);
     min-height: 100vh;
     width: 80%;
     margin: 0 auto;
+    position: relative;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
 }
 
 .Header{
     width: 100%;
     height: 50px;
-    background-color: rgb(233, 106, 106);
+    background-color: rgba(196, 34, 34, 0.6);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
 }
 
 h1, h2{

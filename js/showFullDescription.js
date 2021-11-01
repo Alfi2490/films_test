@@ -9,6 +9,8 @@ function showFullDescription(id) {
 
     let favoriteButton = '';
 
+    let poster = '';
+
     if (filmFavorites.includes(id)) {
         favoriteButton = `
             <button
@@ -29,8 +31,14 @@ function showFullDescription(id) {
         `;
     }
 
+    if (filmData[0].poster_path === null) {
+        poster = ALT_POSTER;
+    } else {
+        poster = `${IMG_URL}${filmData[0].poster_path}`;
+    }
+
     film.innerHTML = `
-        <img class="FullDescriptionFilmPoster" src="${IMG_URL}${filmData[0].poster_path}" >
+        <img class="FullDescriptionFilmPoster" src="${poster}" >
         <div class="FullDescriptionTitleWithDate">
             <h1>${filmData[0].title}</h1>
             <h2>${filmData[0].release_date}</h2>

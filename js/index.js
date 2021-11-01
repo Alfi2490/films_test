@@ -1,4 +1,5 @@
 const IMG_URL = "https://www.themoviedb.org/t/p/w1280";
+const ALT_POSTER = 'https://motivatevalmorgan.com/wp-content/uploads/2016/06/default-movie-768x1129.jpg'
 let films = [];
 let filmFavorites = getFavorite();
 let activeMenuPosition = '';
