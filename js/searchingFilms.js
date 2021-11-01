@@ -27,7 +27,9 @@ function searchingFilms() {
 
 function searchFilmsImplemetation() {
 
+    currentPage = 1;
     renderFilmsList();
+    renderPages();
     activeMenuPosition = 'search';
 
 };

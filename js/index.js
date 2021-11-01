@@ -15,10 +15,8 @@ if (filmFavorites === null) {
 
 getData('popular').then(res => {
 
-    let pagesCount = '';
 
     films = res.results;
-    let pages = Math.floor(films.length/FILMS_ON_PAGE);
 
     let root = document.querySelector("#root");
         
@@ -26,49 +24,14 @@ getData('popular').then(res => {
     filmsList.className = "FilmsList";
     filmsList.innerHTML = '';
 
-    for(let i = 0; i <= pages; i++) {
-
-        if (i === 0) {
-            pagesCount = pagesCount + `<span class="Page Active" onclick="pageClick(event.target.id)" id="${i + 1}">${i + 1}</span>`;
-        } else {
-            pagesCount = pagesCount + `<span class="Page" onclick="pageClick(event.target.id)" id="${i + 1}">${i + 1}</span>`;
-        }
-        
-    }
-
     let filmsPages = document.createElement("div");
     filmsPages.className = "FilmsPages";
-    filmsPages.innerHTML = `
-        ${pagesCount}
-    `;
+    filmsPages.innerHTML = '';
 
-    let listOfFilms = '';
-
-    let filmsForRender = films.slice(currentPage-1, currentPage+7);
-
-    filmsForRender.forEach(f => {
-
-        let inFavs = '';
-
-        if (filmFavorites === null) {
-            filmFavorites = [];
-        } else if (filmFavorites.includes(f.id.toString())) {
-            inFavs = 'InFavs';
-        };
-
-        listOfFilms = listOfFilms + `
-            <div class="Film" id="${f.id}" onclick="showFullDescription(id)">
-                <img class="FilmPoster" src="${IMG_URL}${f.poster_path}" >
-                <div class="${inFavs}">
-                    <h1>${f.original_title}</h1>
-                    <h2>${f.release_date}</h2>
-                </div>
-            </div>
-        `;
-    });
-
-    filmsList.innerHTML = listOfFilms;
     root.append(filmsList);
     root.append(filmsPages);
+
+    renderFilmsList();
+    renderPages();
 
 }).catch(err => alert(err));

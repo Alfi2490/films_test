@@ -6,6 +6,8 @@ function showPopular() {
 };
 
 function showPopularImplementation() {
+    currentPage = 1;
+    renderPages();
     renderFilmsList();
     activeMenuPosition = 'popular';
 }

@@ -39,9 +39,10 @@ p{
 }
 
 .InFavs {
-    border: 1px solid green;
+    background-color: gold;
     padding: 5px;
     border-radius: 5px;
+    box-shadow: 1px 1px 3px 1px #000000;
 }
 
 button {

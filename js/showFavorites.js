@@ -1,10 +1,15 @@
 function showFavorites() {
 
     films = getFavoriteFilms();
-
     showFavoritesImplementation();
+    hidePages();
 
 };
+
+function hidePages() {
+    const filmsPages = document.querySelector(".FilmsPages");
+    filmsPages.innerHTML = '';
+}
 
 function showFavoritesImplementation() {
 
@@ -12,11 +17,19 @@ function showFavoritesImplementation() {
     filmsList.innerHTML = '';
 
     let listOfFilms = '';
+    let poster = '';
 
-    films.forEach(f => {        
+    films.forEach(f => {
+
+        if (f.poster_path === null) {
+            poster = ALT_POSTER
+        } else {
+            poster = `${IMG_URL}${f.poster_path}`;
+        }
+
         listOfFilms = listOfFilms + `
             <div class="FilmFavorite" id="${f.id}">
-                <img class="FilmPosterFavorite" src="${IMG_URL}${f.poster_path}" >
+                <img class="FilmPosterFavorite" src="${poster}" >
                 <div>
                     <h1>${f.original_title}</h1>
                     <h2>${f.release_date}</h2>

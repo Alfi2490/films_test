@@ -6,6 +6,8 @@ function showNowPlaying() {
 };
 
 function nowPlayingImplementation() {
+    currentPage = 1;
+    renderPages();
     renderFilmsList();
     activeMenuPosition = 'now_playing';
 };
