@@ -15,7 +15,6 @@ if (filmFavorites === null) {
 
 getData('popular').then(res => {
 
-
     films = res.results;
 
     let root = document.querySelector("#root");
