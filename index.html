@@ -2,26 +2,27 @@
 <html lang="en">
     <head>        
         <meta charset="UTF-8">
+
         <title>Films APP!</title>
 
-        <script src="index.js" defer ></script>
-        <script src="localStorage.js"></script>
-        <script src="api.js"></script>
-        <script src="showFullDescription.js"></script>
-        <script src="hideFullDescription.js"></script>
-        <script src="addToFavorites.js"></script>
-        <script src="removeFromFavorites.js"></script>
-        <script src="showFavorites.js"></script>
-        <script src="showNowPlaying.js"></script>
-        <script src="showPopular.js"></script>
-        <script src="sortByName.js"></script>
-        <script src="searchingFilms.js"></script>
-        <script src="renderFilmsList.js"></script>
+        <script src="./js/index.js" defer ></script>
+        <script src="./js/localStorage.js"></script>
+        <script src="./js/api.js"></script>
+        <script src="./js/showFullDescription.js"></script>
+        <script src="./js/hideFullDescription.js"></script>
+        <script src="./js/addToFavorites.js"></script>
+        <script src="./js/removeFromFavorites.js"></script>
+        <script src="./js/showFavorites.js"></script>
+        <script src="./js/showNowPlaying.js"></script>
+        <script src="./js/showPopular.js"></script>
+        <script src="./js/sortByName.js"></script>
+        <script src="./js/searchingFilms.js" defer></script>
+        <script src="./js/renderFilmsList.js"></script>
 
-        <link rel="stylesheet" href="./reset.css">
-        <link rel="stylesheet" href="./index.css">
-        <link rel="stylesheet" href="./FilmsList.css">
-        <link rel="stylesheet" href="./Header.css">
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/index.css">
+        <link rel="stylesheet" href="./css/FilmsList.css">
+        <link rel="stylesheet" href="./css/Header.css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,7 +39,7 @@
                 <button class="Popular" onclick="showPopular()">Show popular</button>
                 <button class="NowPlaying" onclick="showNowPlaying()">Show now playing</button>
                 <button class="Favorites" onclick="showFavorites()">Show favorites</button>
-                <input class="Title" type="text" name="Title" id="Title" placeholder="Type film name" onchange="searchingFilms(event.target.value)">
+                <input class="Title" type="text" name="Title" id="Title" placeholder="Type film name">
             </div>
         </div>
     </body>
