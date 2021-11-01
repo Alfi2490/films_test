@@ -1,0 +1,20 @@
+.FilmsPages {
+    padding: 10px;
+    width: 40%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: whitesmoke;
+}
+
+.FilmsPages span {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    padding: 5px;
+}
+
+.FilmsPages span:hover {
+    cursor: pointer;
+}

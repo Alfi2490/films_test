@@ -3,7 +3,10 @@ function renderFilmsList() {
     let filmsList = document.querySelector(".FilmsList");
     filmsList.innerHTML = '';
     listOfFilms = '';
-    films.forEach(f => {
+
+    let filmsForRender = films.slice((currentPage-1)*FILMS_ON_PAGE, (currentPage-1)*FILMS_ON_PAGE+FILMS_ON_PAGE);
+
+    filmsForRender.forEach(f => {
 
         let inFavs = '';
         let poster = '';
