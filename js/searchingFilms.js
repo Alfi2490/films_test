@@ -8,7 +8,7 @@ function updateTitle(e) {
 
     clearTimeout(searchTimeOut);    
     title = e.target.value.trim().toLowerCase();
-    if(title.length <= 2) {
+    if(title.length <= 1) {
         return
     } else {
         searchTimeOut = setTimeout(searchingFilms, 1000);
