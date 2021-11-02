@@ -3,15 +3,16 @@ function renderFilmsList() {
     let filmsList = document.querySelector(".FilmsList");
     filmsList.innerHTML = '';
     listOfFilms = '';
+    let inFavs = '';
+    let poster = '';
 
     let filmsForRender = films.slice((currentPage-1)*FILMS_ON_PAGE, (currentPage-1)*FILMS_ON_PAGE+FILMS_ON_PAGE);
 
     filmsForRender.forEach(f => {
-
-        let inFavs = '';
-        let poster = '';
-
-        if (filmFavorites.includes(f.id.toString())) {
+        
+        if (filmFavorites === null) {
+            inFavs = '';
+        } else if (filmFavorites.includes(f.id.toString())) {
             inFavs = 'InFavs';
         };
 

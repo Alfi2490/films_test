@@ -55,6 +55,7 @@
     margin-bottom: 5px;
     border-radius: 8px;
     align-items: center;
+    box-shadow: 1px 1px 3px 1px black;
 }
 .FilmPosterFavorite {
     width: 10%;
